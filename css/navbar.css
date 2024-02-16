@@ -1,0 +1,38 @@
+.navbar-container {
+    margin: auto;
+    margin-bottom: 500px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7973d2;
+}
+
+.brand {
+    color: black;
+    margin-right: 30%;
+    font-size: 50px;
+}
+
+.navbar>li {
+    float: left;
+}
+
+.navbar>li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar>li a:hover {
+    background-color: #b117bf;
+}
