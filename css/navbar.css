@@ -1,6 +1,5 @@
 .navbar-container {
     margin: auto;
-    margin-bottom: 500px;
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -9,8 +8,8 @@
 
 .navbar {
     list-style-type: none;
+    padding: 0 10%;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #7973d2;
 }
@@ -21,8 +20,13 @@
     font-size: 50px;
 }
 
+.navbar>li:first-child {
+    margin-right: 5%;
+}
+
 .navbar>li {
     float: left;
+    margin-right: 2%;
 }
 
 .navbar>li a {
