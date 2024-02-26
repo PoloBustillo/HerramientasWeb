@@ -1,0 +1,46 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+#content {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#content p {
+    margin-bottom: 20px;
+}
+
+#article-info {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#article-info p {
+    margin: 0;
+    padding: 0;
+}
+
+#social-share {
+    margin-top: 10px;
+}
+
+#social-share a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}

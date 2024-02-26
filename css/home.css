@@ -204,3 +204,56 @@ a {
 .w3-badge {
     border-radius: 50%;
 }
+
+
+.column {
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card-author {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-author {
+    padding: 0 16px;
+    text-align: center;
+}
+
+.container-author::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container-author>.title {
+    padding: 2%;
+    margin: 0;
+    color: grey;
+}
+
+.button-author {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-author:hover {
+    background-color: #555;
+}
+
+.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
