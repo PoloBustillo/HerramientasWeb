@@ -37,6 +37,8 @@
     text-decoration: none;
 }
 
+
+.active,
 .navbar>li a:hover {
     background-color: #b117bf;
 }
