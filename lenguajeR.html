@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Proyecto Herramientas Web</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/blog-article.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+</head>
+
+<body>
+    <nav class="navbar-container sticky">
+        <ul class="navbar p-4">
+            <li>
+                <div class="brand">Blog</div>
+            </li>
+            <li><a class="active" href="/HerramientasWeb/">Home</a></li>
+            <li><a href="archivos.html">Archivos</a></li>
+            <li><a href="populares.html">Populares</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div id="header">
+        <h1>The R Project for Statistical Computing</h1>
+        <div id="article-info">
+            <p>Autor: Javier Martinez</p>
+            <p>Tiempo Lectura: 15 minutes</p>
+            <div id="social-share">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">Share on Facebook</a>
+                <a href="https://twitter.com/share?url=example.org&text=Simple%20Share%20Buttons" target="_blank">Share
+                    on
+                    Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div id="content">
+            <p> R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.
+            </p>
+            <img src=".imgs/Rlogo.webp" />
+            <p><h4>Vectors and assignment</h4></p>
+            <p>R operates on named data structures. The simplest such structure is the numeric vector, which is a single entity consisting of an ordered collection of numbers. To set up a vector named x, say, consisting of five numbers, namely 10.4, 5.6, 3.1, 6.4 and 21.7, use the R command</p>
+            <code>
+            <pre>
+                > x <- c(10.4, 5.6, 3.1, 6.4, 21.7)
+            </pre>
+            </code>
+            <p><h4>Vector arithmetic</h4></p>
+            <p>Vectors can be used in arithmetic expressions, in which case the operations are performed element by element. Vectors occurring in the same expression need not all be of the same length. If they are not, the value of the expression is a vector with the same length as the longest vector which occurs in the expression. Shorter vectors in the expression are recycled as often as need be (perhaps fractionally) until they match the length of the longest vector. In particular a constant is simply repeated. So with the above assignments the command</p>
+            <code><pre>
+                > v <- 2*x + y + 1
+            </pre>
+            </code>
+            <p>The elementary arithmetic operators are the usual +, -, *, / and ^ for raising to a power. In addition all of the common arithmetic functions are available. log, exp, sin, cos, tan, sqrt, and so on, all have their usual meaning. max and min select the largest and smallest elements of a vector respectively. range is a function whose value is a vector of length two, namely c(min(x), max(x)). length(x) is the number of elements in x, sum(x) gives the total of the elements in x, and prod(x) their product.</p>
+            <p>Two statistical functions are mean(x) which calculates the sample mean, which is the same as sum(x)/length(x), and var(x) which gives</p>
+            <code>
+            <pre>
+                sum((x-mean(x))^2)/(length(x)-1)
+            </pre>
+            </code>
+
+            <p><h4>Generating regular sequences</h4></p>
+
+            R has a number of facilities for generating commonly used sequences of numbers. For example 1:30 is the vector c(1, 2, …, 29, 30). The colon operator has high priority within an expression, so, for example 2*1:15 is the vector c(2, 4, …, 28, 30). Put n <- 10 and compare the sequences 1:n-1 and 1:(n-1).
+            <code>
+            <pre>
+            $ pbcopy < ~/.ssh/github-ibrahimlawal.pub $ pbcopy < ~/.ssh/github-ibrahimlawal-paystack.pub $ pbcopy <
+                ~/.ssh/github-ibrahimweynodey.pub 
+            </pre>
+            </code>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>
