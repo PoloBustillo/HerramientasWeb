@@ -182,13 +182,16 @@ a {
     color: inherit;
 }
 
+.tags>.active {
+    padding: 8px;
+}
+
 .badge {
     background-color: #000;
     color: #fff;
     display: inline-block;
     margin: 4px 2px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 6px;
     text-align: center;
 }
 
@@ -265,4 +268,19 @@ a {
 
 #main-footer p {
     text-align: center;
+}
+
+#social-icons {
+    margin: auto;
+    text-align: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 35px !important;
+    color: #000;
+}
+
+.social-icon:hover {
+    color: #b117bf;
 }
