@@ -24,73 +24,63 @@
             <li><a class="active" href="/HerramientasWeb/contacto.html">Contacto</a></li>
         </ul>
     </nav>
-    <section id="contact" class="add-padding border-top-color2">
+    <section id="contact">
+        <div>
+            <h1 class="big-text">Contactanos</h1>
 
-        <div class="container text-center">
+            <p>Si eres desarrollador y te gustaría participar<br>Ganar experiencia. Investigar.</p>
 
-            <div class="row">
+            <p>Sinatra, Ruby on Rails, JavaScript, Node.js, Express.js, Backbone.js, Handlebars.js, jQuery,
+                AJAX, HTML5, CSS3, SASS, SQL, APIs, Git, GitHub/Bitbucket, WordPress, Heroku, Responsive/Mobile
+                Development.
 
-                <div class="col-sm-6 col-md-5 text-right scrollimation fade-up d1">
+            <p>Contactanos y conocenos para que juntos sigamos construyendo este gran blog</p>
 
-                    <h1 class="big-text">Contact Me</h1>
-
-                    <p class="lead">Software Engineer. Lawyer.<br>Experienced Manager. Entrepreneur.</p>
-
-                    <p>Sinatra, Ruby on Rails, JavaScript, Node.js, Express.js, Backbone.js, Handlebars.js, jQuery,
-                        AJAX, HTML5, CSS3, SASS, SQL, APIs, Git, GitHub/Bitbucket, WordPress, Heroku, Responsive/Mobile
-                        Development.
-
-                    <p>Please feel free to contact me with questions, comments or collaborations.</p>
-
-                    <p>For more information, <a href="http://korenlc.com" target="_blank">visit my blog.</a></p>
-
-                </div>
-
-                <!--=== Contact Form ===-->
-
-                <form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3" action="contact.php"
-                    method="post" novalidate>
-
-                    <div class="form-group">
-                        <label class="control-label" for="contact-name">Name</label>
-                        <div class="controls">
-                            <input id="contact-name" name="contactName" placeholder="Your name"
-                                class="form-control requiredField" data-new-placeholder="Your name" type="text"
-                                data-error-empty="Please enter your name">
-                            <i class="fa fa-user"></i>
-                        </div>
-                    </div><!-- End name input -->
-
-                    <div class="form-group">
-                        <label class="control-label" for="contact-mail">Email</label>
-                        <div class=" controls">
-                            <input id="contact-mail" name="email" placeholder="Your email"
-                                class="form-control requiredField" data-new-placeholder="Your email" type="email"
-                                data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                    </div><!-- End email input -->
-
-                    <div class="form-group">
-                        <label class="control-label" for="contact-message">Message</label>
-                        <div class="controls">
-                            <textarea id="contact-message" name="comments" placeholder="Your message"
-                                class="form-control requiredField" data-new-placeholder="Your message" rows="6"
-                                data-error-empty="Please enter your message"></textarea>
-                            <i class="fa fa-comment"></i>
-                        </div>
-                    </div><!-- End textarea -->
-
-                    <p><button name="submit" type="submit" class="btn btn-color2 btn-block" data-error-message="Error!"
-                            data-sending-message="Sending..." data-ok-message="Message Sent"><i
-                                class="fa fa-paper-plane"></i>Send Message</button></p>
-                    <input type="hidden" name="submitted" id="submitted" value="true" />
-
-                </form><!-- End contact-form -->
-
-            </div>
+            <p>Para mas información, <a href="https://polobustillo.github.io/HerramientasWeb/" target="_blank">visita
+                    nuestras secciones.</a></p>
 
         </div>
+
+
+
+        <form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3" novalidate>
+
+            <div class="form-group">
+                <label class="control-label" for="contact-name">Nombre</label>
+                <div class="controls">
+                    <input id="contact-name" name="contactName" placeholder="Tu nombre"
+                        class="form-control requiredField">
+                    <i class="fa fa-user"></i>
+                </div>
+            </div><!-- End name input -->
+
+            <div class="form-group">
+                <label class="control-label" for="contact-mail">Email</label>
+                <div class=" controls">
+                    <input id="contact-mail" name="email" placeholder="Tu email" class="form-control requiredField"
+                        data-new-placeholder="Tu email" type="email">
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="contact-message">Mensaje</label>
+                <div class="controls">
+                    <textarea id="contact-message" name="comments" placeholder="Your message"
+                        class="form-control requiredField" data-new-placeholder="Your message" rows="6"></textarea>
+                    <i class="fa fa-comment"></i>
+                </div>
+            </div><!-- End textarea -->
+
+            <p>
+                <button name="submit" type="submit" class="btn btn-color2 btn-block">
+                    <i class="fa fa-paper-plane"></i> Envianos un mensaje
+                </button>
+            </p>
+
+
+        </form><!-- End contact-form -->
+
 
     </section>
 
