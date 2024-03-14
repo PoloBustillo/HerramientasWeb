@@ -295,3 +295,12 @@ a {
 .error-page .error-inner {
     display: inline-block;
 }
+
+.big-text {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 62px;
+    letter-spacing: 0.01em;
+    word-spacing: 0.15em;
+    text-transform: uppercase;
+}
