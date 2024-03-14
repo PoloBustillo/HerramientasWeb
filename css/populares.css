@@ -1,10 +1,184 @@
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     padding: 10px;
 }
 
 .grid-item {
     padding: 20px;
     text-align: center;
+}
+
+
+h1 {
+    font-size: 72px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: -webkit-linear-gradient(#2a1755, #fb64bc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h5 {
+    font-size: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: -webkit-linear-gradient(#ffedf7, #e4d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.action {
+    text-decoration: none;
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #eb25c3;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
+
+.card {
+    position: relative;
+    height: 254px;
+    background: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.card b {
+    position: absolute;
+    inset: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.card .content {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 2em;
+    border-radius: 4px;
+    margin-top: -0.5em;
+    opacity: 1;
+    background-color: #576dbd;
+    transition: .28s ease-in-out;
+}
+
+.views_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+
+.views_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+
+.views:hover {
+    background-color: #5A5F73;
+    cursor: pointer;
+}
+
+.btns {
+    position: relative;
+    bottom: -30px;
+    display: flex;
+    gap: 0.5em;
+    transition: .2s ease-in-out;
+}
+
+
+.likes,
+.comments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 2em;
+    border-radius: 4px;
+    margin-top: -0.5em;
+    background-color: #576dbd;
+    transition: .2s ease-in-out;
+}
+
+.likes_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+
+.likes_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+
+.likes:hover {
+    background-color: #5A5F73;
+    cursor: pointer;
+}
+
+
+.comments_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+
+.comments_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+
+.comments:hover {
+    background-color: #5A5F73;
+    cursor: pointer;
 }
