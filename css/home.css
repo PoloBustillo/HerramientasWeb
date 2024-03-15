@@ -193,6 +193,7 @@ a {
     margin: 4px 2px;
     padding: 6px;
     text-align: center;
+    cursor: pointer;
 }
 
 .column {
