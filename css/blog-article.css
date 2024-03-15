@@ -24,6 +24,17 @@ body {
     margin-bottom: 20px;
 }
 
+.img-container {
+    border: 3px solid #dddddd;
+    margin: 50px;
+    padding: 30px;
+    text-align: center;
+}
+
+#content img {
+    width: 300px;
+}
+
 #article-info {
     font-family: Arial, sans-serif;
     color: #333;
