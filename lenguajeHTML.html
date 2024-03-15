@@ -22,7 +22,7 @@
         </ul>
     </nav>
     <div id="header">
-        <h1>Multiple GitHub Accounts</h1>
+        <h1>Lenguaje HTML</h1>
         <div id="article-info">
             <p>Autor: Javi Enfermo</p>
             <p>Tiempo Lectura: 5 minutes</p>
@@ -37,24 +37,24 @@
 
     <div id="wrapper">
         <div id="content">
-            <p> I am using a third, nonexistent account in the samples to show that this can be extended to more than 2
-                accounts.
+            <p> El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de datos. Como lo sugiere el título, este artículo te dará una comprensión básica de HTML y cúal es su función.
             </p>
 
-            <p>Create SSH keys for all accounts</p>
-            <img src="./imgs/python-timeline.webp" />
+            <p>HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura de tu contenido. HTML consiste en una serie de elementos que usarás para encerrar diferentes partes del contenido para que se vean o comporten de una determinada manera. Las etiquetas de encierre pueden hacer de una palabra o una imagen un hipervínculo a otro sitio, se pueden cambiar palabras a cursiva, agrandar o achicar la letra, etc. Por ejemplo, toma la siguiente línea de contenido:</p>
+            <img src="./imgs/html1.webp" />
             <p>First make sure your current directory is your .ssh folder.</p>
+            <img src="./imgs/html3.webp" />
             <code>
-            <pre>
-            $ cd ~/.ssh
-            $ ssh-keygen -t rsa -C "my@pers.on.al" -f "github-ibrahimlawal"
-            $ ssh-keygen -t rsa -C "my@wo.rk" -f "github-ibrahimlawal-paystack"
-            $ ssh-keygen -t rsa -C "moi@pl.ay" -f "github-ibraheemweynodey"
-            </pre>
+            <p>
+                La etiqueta de apertura: consiste en el nombre del elemento (en este caso, p), encerrado por paréntesis angulares (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
+                La etiqueta de cierre: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
+                El contenido: este es el contenido del elemento, que en este caso es sólo texto.
+                El elemento: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
+            </p>
             </code>
             <p>The -C option is a comment to help identify the key.</p>
             <p>The -f option specifies the file name for the key pair.</p>
-            <pre>
+            <p>
             You can choose how to name the key pair. I followed the recommendation here and used github-{GitHub
             username.
             
@@ -62,15 +62,13 @@
 
             Add the SSH keys to your SSH-agent
             Your keys are now created but won’t be used until they are added to the agent. Let’s add them.
-            </pre>
+            </p>
             <code>
-            <pre>
-            $ ssh-add --apple-use-keychain ~/.ssh/github-ibrahimlawal
-            $ ssh-add --apple-use-keychain ~/.ssh/github-ibrahimlawal-paystack
-            $ ssh-add --apple-use-keychain ~/.ssh/github-ibraheemweynodey
-            </pre>
+            <p>
+                Los atributos contienen información adicional acerca del elemento, la cual no quieres que aparezca en el contenido real del elemento. Aquí class es el nombre del atributo y editor-note el valor del atributo. En este caso, el atributo class permite darle al elemento un nombre identificativo, que se puede utilizar luego para apuntarle al elemento información de estilo y demás cosas.
+            </p>
             </code>
-
+            <img src="./imgs/html2.webp" />
             <p>You only need the --apple-use-keychain option on a mac. More details on adding keys to the SSH agent
                 here.</p>
 
@@ -80,20 +78,11 @@
             Visit here while logged in to the corresponding GitHub account;
             Click the ‘New SSH key’ button and paste the public key from clipboard.
             <code>
-            <pre>
-            $ pbcopy < ~/.ssh/github-ibrahimlawal.pub $ pbcopy < ~/.ssh/github-ibrahimlawal-paystack.pub $ pbcopy <
-                ~/.ssh/github-ibrahimweynodey.pub 
+            <p>
+                Puedes también colocar elementos dentro de otros elementos —esto se llama anidamiento—. Si, por ejemplo, quieres resaltar una palabra del texto (en el ejemplo la palabra «muy»), podemos encerrarla en un elemento <strong>, que significa que dicha palabra se debe enfatizar:
             </pre>
             </code>
-            <p>Create GitHub host entries for all accounts The ~/.ssh/config file
-                allows you specify a lot of config options for SSH. The commands below create the file if it doesn’t
-                exist. And opens it in your default editing command… Likely TextEdit. $ open -e ~/.ssh/config Add these
-                lines to the file, each block corresponding to each account you created earlier.</p>
-            #ibrahimlawal account
-            Host github.com-ibrahimlawal HostName github.com User git IdentityFile ~/.ssh/github-ibrahimlawal
-            #ibrahimlawal-paystack account Host github.com-ibrahimlawal-paystack HostName github.com User git
-            IdentityFile ~/.ssh/github-ibrahimlawal-paystack #ibraheemweynodey account Host
-            github.com-ibraheemweynodey HostName github.com User git IdentityFile ~/.ssh/github-ibraheemweynodey
+            <p>
 
         </div>
     </div>

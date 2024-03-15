@@ -22,9 +22,9 @@
         </ul>
     </nav>
     <div id="header">
-        <h1>Multiple GitHub Accounts</h1>
+        <h1>Lenguaje CSS</h1>
         <div id="article-info">
-            <p>Autor: Javi Enfermo</p>
+            <p>Autor: Javier</p>
             <p>Tiempo Lectura: 5 minutes</p>
             <div id="social-share">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">Share on Facebook</a>
@@ -37,38 +37,31 @@
 
     <div id="wrapper">
         <div id="content">
-            <p> I am using a third, nonexistent account in the samples to show that this can be extended to more than 2
-                accounts.
+            <p> Cuando un navegador muestra un documento, ha de combinar el contenido con la información de estilo del documento. Procesa el documento en una serie de etapas, que enumeraremos a continuación. Ten en cuenta que este es un modelo muy simplificado de lo que sucede cuando un navegador carga una página web y que cada navegador gestiona el proceso de manera diferente. Pero esto es más o menos lo que sucede.
             </p>
 
-            <p>Create SSH keys for all accounts</p>
-            <img src="./imgs/python-timeline.webp" />
-            <p>First make sure your current directory is your .ssh folder.</p>
+            <p>El navegador carga el HTML (por ejemplo, lo recibe de la red).</p>
+            <img src="./imgs/css1.webp" />
+            <p>Convierte el HTML en un DOM (Modelo de objetos del documento). El DOM representa el documento en la memoria del ordenador. Lo explicaremos más detalladamente en la sección siguiente.</p>
             <code>
-            <pre>
-            $ cd ~/.ssh
-            $ ssh-keygen -t rsa -C "my@pers.on.al" -f "github-ibrahimlawal"
-            $ ssh-keygen -t rsa -C "my@wo.rk" -f "github-ibrahimlawal-paystack"
-            $ ssh-keygen -t rsa -C "moi@pl.ay" -f "github-ibraheemweynodey"
-            </pre>
+            <p>
+                Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las imágenes y los videos incrustados... ¡y también el CSS vinculado! JavaScript aparece un poco más adelante en el proceso, pero no vamos a hablar de ello aún para evitar complicar las cosas.
+            </p>
+            El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector. Por ejemplo, elemento, clase, ID, y así sucesivamente. Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les aplica el estilo según corresponda (este paso intermedio se llama árbol de renderización).
             </code>
-            <p>The -C option is a comment to help identify the key.</p>
-            <p>The -f option specifies the file name for the key pair.</p>
-            <pre>
-            You can choose how to name the key pair. I followed the recommendation here and used github-{GitHub
-            username.
+            <p>El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las reglas.</p>
+            <p>En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).</p>
+            <p>
+                Un DOM tiene una estructura en forma de árbol. Cada elemento, atributo o bloque en el lenguaje de marcado se convierte en un nodo DOM con estructura de árbol. Los nodos se definen por su relación con otros nodos DOM. Algunos elementos son padres de nodos secundarios, y estos nodos hijos tienen hermanos.
             
-            You’ll now have a public and private key in your ~/.ssh/ folder.
-
-            Add the SSH keys to your SSH-agent
-            Your keys are now created but won’t be used until they are added to the agent. Let’s add them.
-            </pre>
+                Comprender el DOM te ayuda a diseñar, depurar y mantener tu CSS porque en el DOM es donde tu CSS se encuentra con el contenido del documento. Cuando comiences a trabajar con las herramientas DevTools (o herramientas del desarrollador) del navegador, te moverás por el DOM mientras seleccionas elementos con el fin de ver qué reglas se aplican.
+            </p>
             <code>
-            <pre>
+            <p>
             $ ssh-add --apple-use-keychain ~/.ssh/github-ibrahimlawal
             $ ssh-add --apple-use-keychain ~/.ssh/github-ibrahimlawal-paystack
             $ ssh-add --apple-use-keychain ~/.ssh/github-ibraheemweynodey
-            </pre>
+            </p>
             </code>
 
             <p>You only need the --apple-use-keychain option on a mac. More details on adding keys to the SSH agent
@@ -80,10 +73,9 @@
             Visit here while logged in to the corresponding GitHub account;
             Click the ‘New SSH key’ button and paste the public key from clipboard.
             <code>
-            <pre>
-            $ pbcopy < ~/.ssh/github-ibrahimlawal.pub $ pbcopy < ~/.ssh/github-ibrahimlawal-paystack.pub $ pbcopy <
-                ~/.ssh/github-ibrahimweynodey.pub 
-            </pre>
+            <p>
+           
+            </p>
             </code>
             <p>Create GitHub host entries for all accounts The ~/.ssh/config file
                 allows you specify a lot of config options for SSH. The commands below create the file if it doesn’t
