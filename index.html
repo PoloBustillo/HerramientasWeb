@@ -453,15 +453,26 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
+                                    <span class="" data-comments-id="C#" style="padding: 12px 24px;float: right;">
                                         <b>Comments
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
                             </div>
+                            <div id="comments-section" style="display: none;">
+                                <h2>Comentarios</h2>
+                                <div id="old-comments">
+                                    <!-- Aquí irán los comentarios viejos -->
+                                </div>
+                                <form id="new-comment-form">
+                                    <textarea id="new-comment" placeholder="Escribe un nuevo comentario..."></textarea>
+                                    <button type="submit">Enviar</button>
+                                </form>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <hr />
@@ -494,25 +505,120 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span class="comment-button" style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
                             </div>
-                        </div>
-                        <div id="comments-section" style="display: none;">
-                            <h2>Comentarios</h2>
-                            <div id="old-comments">
-                                <!-- Aquí irán los comentarios viejos -->
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Comments</h1>
+                                    <form id="new-comment-form">
+                                        <textarea id="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list">
+                                        <li>
+                                            <div class="comment-main-level">
+
+                                                <div class="comment-avatar"><img
+                                                        src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg"
+                                                        alt=""></div>
+
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <h6 class="comment-name by-author"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+
+                                                    <div class="comment-avatar"><img
+                                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
+                                                            alt=""></div>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                            <i class="fa fa-reply"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-avatar"><img
+                                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg"
+                                                            alt=""></div>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <h6 class="comment-name by-author"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                            <i class="fa fa-reply"></i>
+                                                            <i class="fa fa-heart"></i>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+
+                                                <div class="comment-avatar"><img
+                                                        src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
+                                                        alt=""></div>
+
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
-                            <form id="new-comment-form">
-                                <textarea id="new-comment" placeholder="Escribe un nuevo comentario..."></textarea>
-                                <button type="submit">Enviar</button>
-                            </form>
                         </div>
+
                     </div>
                 </div>
                 <hr />
@@ -710,7 +816,7 @@
         }
         function toggleChat() {
             var chatContainer = document.getElementById('chat-container');
-            if (chatContainer.style.display === 'none') {
+            if (chatContainer.style.display == 'none') {
                 chatContainer.style.display = 'block';
             } else {
                 chatContainer.style.display = 'none';
@@ -753,11 +859,11 @@
 
         document.querySelectorAll('.comment-button').forEach(function (button) {
             button.addEventListener('click', function () {
-                var comments = document.getElementById('comments-section')
-                if (comments.style.display === 'none') {
-                    comments.style.display = 'block';
+                var commentsSection = this.nextElementSibling;
+                if (commentsSection.style.display === 'none') {
+                    commentsSection.style.display = 'block';
                 } else {
-                    comments.style.display = 'none';
+                    commentsSection.style.display = 'none';
                 }
             });
         });
