@@ -21,14 +21,16 @@
     <div id="chat-container" style="display: none;">
         <div id="chat-header">
             <h3>Chat</h3>
-            <button onclick="toggleChat()">X</button>
+            <span class="close-button"><a onclick="toggleChat()">&times;</a></span>
         </div>
         <div id="chat-messages">
             <!-- Aquí irán los mensajes del chat -->
         </div>
         <div id="chat-footer">
-            <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
-            <button id="chat-send" onclick="sendMessage()">Enviar</button>
+            <form id="chat-form" style="width: 100%;display: flex;">
+                <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
+                <button id="chat-send" onclick="sendMessage()">Enviar</button>
+            </form>
         </div>
     </div>
     <div id="modal" class="modal">
@@ -494,12 +496,22 @@
                             </div>
                             <div class="col m4">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
+                                    <span class="comment-button" style="padding: 12px 24px;float: right;">
                                         <b>Comments
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
                             </div>
+                        </div>
+                        <div id="comments-section" style="display: none;">
+                            <h2>Comentarios</h2>
+                            <div id="old-comments">
+                                <!-- Aquí irán los comentarios viejos -->
+                            </div>
+                            <form id="new-comment-form">
+                                <textarea id="new-comment" placeholder="Escribe un nuevo comentario..."></textarea>
+                                <button type="submit">Enviar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -712,24 +724,43 @@
             message.className = 'message';
             var avatar = document.createElement('img');
             avatar.className = 'avatar';
-            avatar.src = 'https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png'; // Reemplaza esto con la ruta a tu imagen de avatar
+            avatar.src = 'https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png';
             var text = document.createElement('p');
             text.textContent = chatInput.value;
+            var time = document.createElement('div');
+            time.className = 'message-time2';
+            time.textContent = new Date().toLocaleTimeString(); // Agregar la hora actual
             message.appendChild(avatar);
             message.appendChild(text);
             chatMessages.appendChild(message);
+            chatMessages.appendChild(time); // Agregar la hora al mensaje
             var message2 = document.createElement('div');
             message2.className = 'message2';
             var avatar2 = document.createElement('img');
             avatar2.className = 'avatar2';
-            avatar2.src = 'https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png'; // Reemplaza esto con la ruta a tu imagen de avatar
+            avatar2.src = 'https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png';
             var text2 = document.createElement('p');
             text2.textContent = 'Pronto contestaremos...';
+            var time2 = document.createElement('div');
+            time2.className = 'message-time';
+            time2.textContent = new Date().toLocaleTimeString(); // Agregar la hora actual
             message2.appendChild(avatar2);
             message2.appendChild(text2);
             chatMessages.appendChild(message2);
+            chatMessages.appendChild(time2);
             chatInput.value = '';
         }
+
+        document.querySelectorAll('.comment-button').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var comments = document.getElementById('comments-section')
+                if (comments.style.display === 'none') {
+                    comments.style.display = 'block';
+                } else {
+                    comments.style.display = 'none';
+                }
+            });
+        });
     </script>
 </body>
 

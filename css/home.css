@@ -547,3 +547,17 @@ a {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+.message-time {
+    color: #aaa;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.message-time2 {
+    color: #aaa;
+    font-size: 0.8em;
+    margin-left: auto;
+    width: 30%;
+    /* Alinear a la derecha */
+}
