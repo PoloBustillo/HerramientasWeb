@@ -307,7 +307,8 @@ a {
 }
 
 /* CSS */
-.modal {
+.modal,
+.modalsesion {
     display: none;
     position: fixed;
     z-index: 1;
@@ -334,8 +335,22 @@ a {
     font-weight: bold;
 }
 
+.close-button-sesion {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 .close-button:hover,
 .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-button-sesion:hover,
+.close-button-sesion:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -359,7 +374,19 @@ a {
     gap: 10px;
 }
 
+#register-form-sesion {
+    display: flex;
+    margin: 5% 15%;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #register-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#register-form-sesion label {
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -373,8 +400,17 @@ a {
     font-size: 16px;
 }
 
+#register-form-sesion input[type="text"],
+#register-form-sesion input[type="email"],
+#register-form-sesion input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 #register-form input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #b118bf;
     color: white;
     margin: 0 30%;
     padding: 10px 20px;
@@ -384,14 +420,130 @@ a {
     font-size: 16px;
 }
 
+#register-form-sesion input[type="submit"] {
+    background-color: #b118bf;
+    color: white;
+    margin: 0 30%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
 #register-form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #b118bf;
+}
+
+#register-form-sesion input[type="submit"]:hover {
+    background-color: #b118bf;
 }
 
 /* CSS */
 .modal-content h3 {
     font-family: 'Raleway', sans-serif;
-    color: #4CAF50;
+    color: #b118bf;
     text-align: center;
     margin-bottom: 20px;
+}
+
+
+/* CSS */
+#floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b118bf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10%;
+    height: 25px;
+    width: 61px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    /* Reducir el tamaño de la fuente */
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#chat-header {
+    padding: 10px;
+    background-color: #b118bf;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Alinear el botón de cerrar a la derecha */
+}
+
+#chat-messages {
+    height: 60%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#chat-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#chat-send {
+    background-color: #b118bf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.message,
+.message2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.avatar2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }

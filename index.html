@@ -14,6 +14,23 @@
 </head>
 
 <body>
+
+
+    <div id="floating-button" onclick="toggleChat()">Chat</div>
+
+    <div id="chat-container" style="display: none;">
+        <div id="chat-header">
+            <h3>Chat</h3>
+            <button onclick="toggleChat()">X</button>
+        </div>
+        <div id="chat-messages">
+            <!-- Aquí irán los mensajes del chat -->
+        </div>
+        <div id="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
+            <button id="chat-send" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
     <div id="modal" class="modal">
         <div class="modal-content">
 
@@ -30,6 +47,22 @@
             </form>
         </div>
     </div>
+    <div id="modalsesion" class="modalsesion">
+        <div class="modal-content">
+
+            <span class="close-button-sesion">&times;</span>
+            <h3>Iniciar Sesión</h3>
+            <form id="register-form-sesion">
+                <label for="username">Usuario:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+    </div>
     <nav class="navbar-container">
         <ul class="navbar p-4">
             <li>
@@ -39,6 +72,7 @@
             <li><a href="populares.html">Populares</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="#" onclick="displayModal()">Crear Usuario</a></li>
+            <li><a href="#" onclick="displayModalSesion()">Iniciar Sesion</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -614,6 +648,11 @@
         </div>
     </footer>
     <script>
+
+        var modalSesion = document.getElementById("modalsesion");
+        var btnSesion = document.querySelector("a[onclick='displayModalSesion()']");
+        var spanSesion = document.getElementsByClassName("close-button-sesion")[0];
+
         var modal = document.getElementById("modal");
         var btn = document.querySelector("a[onclick='displayModal()']");
         var span = document.getElementsByClassName("close-button")[0];
@@ -623,6 +662,11 @@
             alert('Registro exitoso');
             modal.style.display = "none";
         });
+        document.getElementById('register-form-sesion').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert('Inicio de sesión exitoso');
+            modalSesion.style.display = "none";
+        });
 
         btn.onclick = function () {
             modal.style.display = "block";
@@ -631,11 +675,60 @@
         span.onclick = function () {
             modal.style.display = "none";
         }
+        btnSesion.onclick = function () {
+            modalSesion.style.display = "block";
+        }
+
+        spanSesion.onclick = function () {
+            modalSesion.style.display = "none";
+        }
+
 
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+
+        }
+        window.onclick = function (event) {
+            if (event.target == modalSesion) {
+                modalSesion.style.display = "none";
+            }
+
+        }
+        function toggleChat() {
+            var chatContainer = document.getElementById('chat-container');
+            if (chatContainer.style.display === 'none') {
+                chatContainer.style.display = 'block';
+            } else {
+                chatContainer.style.display = 'none';
+            }
+        }
+
+        function sendMessage() {
+            var chatInput = document.getElementById('chat-input');
+            var chatMessages = document.getElementById('chat-messages');
+            var message = document.createElement('div');
+            message.className = 'message';
+            var avatar = document.createElement('img');
+            avatar.className = 'avatar';
+            avatar.src = 'https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png'; // Reemplaza esto con la ruta a tu imagen de avatar
+            var text = document.createElement('p');
+            text.textContent = chatInput.value;
+            message.appendChild(avatar);
+            message.appendChild(text);
+            chatMessages.appendChild(message);
+            var message2 = document.createElement('div');
+            message2.className = 'message2';
+            var avatar2 = document.createElement('img');
+            avatar2.className = 'avatar2';
+            avatar2.src = 'https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png'; // Reemplaza esto con la ruta a tu imagen de avatar
+            var text2 = document.createElement('p');
+            text2.textContent = 'Pronto contestaremos...';
+            message2.appendChild(avatar2);
+            message2.appendChild(text2);
+            chatMessages.appendChild(message2);
+            chatInput.value = '';
         }
     </script>
 </body>
