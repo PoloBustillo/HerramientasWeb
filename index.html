@@ -10,9 +10,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script async src="./scripts/functions.js"></script>
+
 </head>
 
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close-button">&times;</span>
+            <h3>Registrate</h3>
+            <form id="register-form">
+                <label for="username">Usuario:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <input type="submit" value="Registrate">
+            </form>
+        </div>
+    </div>
     <nav class="navbar-container">
         <ul class="navbar p-4">
             <li>
@@ -21,6 +38,7 @@
             <li><a class="active" href="/HerramientasWeb/">Home</a></li>
             <li><a href="populares.html">Populares</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#" onclick="displayModal()">Crear Usuario</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -604,6 +622,32 @@
             <p class="text-center">&copy; 2024 - Herramientas Web</p>
         </div>
     </footer>
+    <script>
+        var modal = document.getElementById("modal");
+        var btn = document.querySelector("a[onclick='displayModal()']");
+        var span = document.getElementsByClassName("close-button")[0];
+
+        document.getElementById('register-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert('Registro exitoso');
+            modal.style.display = "none";
+        });
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 
 </html>
