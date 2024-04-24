@@ -696,7 +696,7 @@ a {
     display: block;
     border-width: 10px 12px 10px 0;
     border-style: solid;
-    border-color: transparent #FCFCFC;
+    border-color: transparent #4df0bb;
     top: 8px;
     left: -11px;
 }
@@ -712,7 +712,7 @@ a {
 }
 
 .comment-box .comment-head {
-    background: #FCFCFC;
+    background: #4df0bb;
     padding: 10px 12px;
     border-bottom: 1px solid #E5E5E5;
     overflow: hidden;
@@ -773,7 +773,6 @@ a {
 }
 
 .comment-box .comment-name.by-author:after {
-    content: 'autor';
     background: #03658c;
     color: #FFF;
     font-size: 12px;
@@ -783,4 +782,16 @@ a {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+}
+
+.new-comment {
+    width: 100%;
+    height: 200px;
+}
+
+.new-comment-form button {
+    float: right;
+    color: white;
+    background: #b118bf;
+    padding: .7em;
 }
