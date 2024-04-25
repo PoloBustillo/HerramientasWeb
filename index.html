@@ -35,8 +35,7 @@
     </div>
     <div id="modal" class="modal">
         <div class="modal-content">
-
-            <span class="close-button">&times;</span>
+            <span class="close-button-register">&times;</span>
             <h3>Registrate</h3>
             <form id="register-form">
                 <label for="username">Usuario:</label><br>
@@ -51,7 +50,6 @@
     </div>
     <div id="modalsesion" class="modalsesion">
         <div class="modal-content">
-
             <span class="close-button-sesion">&times;</span>
             <h3>Iniciar Sesión</h3>
             <form id="register-form-sesion">
@@ -106,13 +104,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -145,13 +237,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -182,13 +368,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -219,13 +499,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -260,13 +634,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -298,13 +766,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -337,13 +899,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -376,13 +1032,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -414,13 +1164,107 @@
                                     </button>
                                 </p>
                             </div>
-                            <div class="col m4">
+                            <div class="col m4 comment-button">
                                 <p>
-                                    <span style="padding: 12px 24px;float: right;">
-                                        <b>Comments
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
+                                        <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
                                 </p>
+                            </div>
+                            <div class="row" id="comments-section" style="display: none;">
+                                <div class="comments-container">
+                                    <h1>Nuevo comentario</h1>
+                                    <form class="new-comment-form">
+                                        <textarea class="new-comment"
+                                            placeholder="Escribe un nuevo comentario..."></textarea>
+                                        <button type="submit">Enviar</button>
+                                    </form>
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
+                                                        </h6>
+                                                        <span>20 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="comments-list reply-list">
+                                                <li>
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+
+                                                    <div class="comment-box">
+                                                        <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
+                                                            <h6 class="comment-name"><a href="#">Agustin
+                                                                    Ortiz</a></h6>
+                                                            <span>10 minutes ago</span>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Velit omnis animi et iure laudantium vitae, praesentium
+                                                            optio, sapiente distinctio illo?
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <div class="comment-main-level">
+                                                <div class="comment-box">
+
+                                                    <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
+                                                        <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+                                                        <span>10 minutes ago</span>
+                                                        <i class="reply-button fa fa-reply"></i>
+                                                        <i class="fa fa-heart"></i>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                                                        omnis animi et iure laudantium vitae, praesentium optio,
+                                                        sapiente distinctio illo?
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -455,7 +1299,7 @@
                             </div>
                             <div class="col m4 comment-button">
                                 <p>
-                                    <span data-comments-id="C#" style="padding: 12px 24px;float: right;">
+                                    <span data-comments-id="C" style="padding: 12px 24px;float: right;">
                                         <b>Comments +/-
                                              </b>
                                         <span class="tag">0</span></span>
@@ -469,20 +1313,18 @@
                                             placeholder="Escribe un nuevo comentario..."></textarea>
                                         <button type="submit">Enviar</button>
                                     </form>
-                                    <ul id="comments-list" class="comments-list">
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
                                         <li>
                                             <div class="comment-main-level">
-
-                                                <div class="comment-avatar"><img
-                                                        src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg"
-                                                        alt=""></div>
-
                                                 <div class="comment-box">
                                                     <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
                                                         <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
                                                         </h6>
                                                         <span>20 minutes ago</span>
-                                                        <i class="fa fa-reply"></i>
+                                                        <i class="reply-button fa fa-reply"></i>
                                                         <i class="fa fa-heart"></i>
                                                     </div>
                                                     <div class="comment-content">
@@ -495,17 +1337,13 @@
 
                                             <ul class="comments-list reply-list">
                                                 <li>
-
-                                                    <div class="comment-avatar"><img
-                                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
-                                                            alt=""></div>
-
                                                     <div class="comment-box">
                                                         <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
                                                             <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
                                                             <span>10 minutes ago</span>
-                                                            <i class="fa fa-reply"></i>
-                                                            <i class="fa fa-heart"></i>
                                                         </div>
                                                         <div class="comment-content">
                                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -517,17 +1355,14 @@
 
                                                 <li>
 
-                                                    <div class="comment-avatar"><img
-                                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg"
-                                                            alt=""></div>
-
                                                     <div class="comment-box">
                                                         <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
                                                             <h6 class="comment-name"><a href="#">Agustin
                                                                     Ortiz</a></h6>
                                                             <span>10 minutes ago</span>
-                                                            <i class="fa fa-reply"></i>
-                                                            <i class="fa fa-heart"></i>
                                                         </div>
                                                         <div class="comment-content">
                                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -541,16 +1376,15 @@
 
                                         <li>
                                             <div class="comment-main-level">
-
-                                                <div class="comment-avatar"><img
-                                                        src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
-                                                        alt=""></div>
-
                                                 <div class="comment-box">
+
                                                     <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
                                                         <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
                                                         <span>10 minutes ago</span>
-                                                        <i class="fa fa-reply"></i>
+                                                        <i class="reply-button fa fa-reply"></i>
                                                         <i class="fa fa-heart"></i>
                                                     </div>
                                                     <div class="comment-content">
@@ -615,20 +1449,18 @@
                                             placeholder="Escribe un nuevo comentario..."></textarea>
                                         <button type="submit">Enviar</button>
                                     </form>
-                                    <ul id="comments-list" class="comments-list">
+                                    <ul id="comments-list" class="comments-list" style="padding-top: 40px;">
                                         <li>
                                             <div class="comment-main-level">
-
-                                                <div class="comment-avatar"><img
-                                                        src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
-                                                        alt=""></div>
-
                                                 <div class="comment-box">
                                                     <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                alt=""></div>
                                                         <h6 class="comment-name"><a href="#">Agustin Ortiz</a>
                                                         </h6>
                                                         <span>20 minutes ago</span>
-                                                        <i class="fa fa-reply"></i>
+                                                        <i class="reply-button fa fa-reply"></i>
                                                         <i class="fa fa-heart"></i>
                                                     </div>
                                                     <div class="comment-content">
@@ -641,13 +1473,11 @@
 
                                             <ul class="comments-list reply-list">
                                                 <li>
-
-                                                    <div class="comment-avatar"><img
-                                                            src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
-                                                            alt=""></div>
-
                                                     <div class="comment-box">
                                                         <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                    alt=""></div>
                                                             <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
                                                             <span>10 minutes ago</span>
                                                         </div>
@@ -661,12 +1491,11 @@
 
                                                 <li>
 
-                                                    <div class="comment-avatar"><img
-                                                            src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
-                                                            alt=""></div>
-
                                                     <div class="comment-box">
                                                         <div class="comment-head">
+                                                            <div class="comment-avatar"><img
+                                                                    src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+                                                                    alt=""></div>
                                                             <h6 class="comment-name"><a href="#">Agustin
                                                                     Ortiz</a></h6>
                                                             <span>10 minutes ago</span>
@@ -683,16 +1512,15 @@
 
                                         <li>
                                             <div class="comment-main-level">
-
-                                                <div class="comment-avatar"><img
-                                                        src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
-                                                        alt=""></div>
-
                                                 <div class="comment-box">
+
                                                     <div class="comment-head">
+                                                        <div class="comment-avatar"><img
+                                                                src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+                                                                alt=""></div>
                                                         <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
                                                         <span>10 minutes ago</span>
-                                                        <i class="fa fa-reply"></i>
+                                                        <i class="reply-button fa fa-reply"></i>
                                                         <i class="fa fa-heart"></i>
                                                     </div>
                                                     <div class="comment-content">
@@ -856,14 +1684,15 @@
         </div>
     </footer>
     <script>
+        var modal = document.getElementById("modal");
+        var btn = document.querySelector("a[onclick='displayModal()']");
+        var span = document.getElementsByClassName("close-button-register")[0];
 
         var modalSesion = document.getElementById("modalsesion");
         var btnSesion = document.querySelector("a[onclick='displayModalSesion()']");
         var spanSesion = document.getElementsByClassName("close-button-sesion")[0];
 
-        var modal = document.getElementById("modal");
-        var btn = document.querySelector("a[onclick='displayModal()']");
-        var span = document.getElementsByClassName("close-button")[0];
+
 
         document.getElementById('register-form').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the form from submitting normally
@@ -881,6 +1710,7 @@
         }
 
         span.onclick = function () {
+            console.log('CLOOOSE');
             modal.style.display = "none";
         }
         btnSesion.onclick = function () {
@@ -893,16 +1723,12 @@
 
 
         window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-
-        }
-        window.onclick = function (event) {
             if (event.target == modalSesion) {
                 modalSesion.style.display = "none";
             }
-
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
         function toggleChat() {
             var chatContainer = document.getElementById('chat-container');
@@ -912,10 +1738,96 @@
                 chatContainer.style.display = 'none';
             }
         }
+        document.querySelectorAll('.reply-button').forEach(function (button) {
+            button.addEventListener('click', addReply);
+        });
 
+        function addReply() {
+
+            var prompt = window.prompt('Nuevo mensaje:')
+            console.log(prompt);
+            var comment = this.parentNode.parentNode.parentNode.parentNode
+            var replyList = document.createElement("ul");
+            replyList.classList.add("reply-list");
+            replyList.classList.add("comments-list");
+            var commentList = document.createElement("li");
+            var commentBox = document.createElement("div");
+            commentBox.classList.add("comment-box");
+            commentHead = document.createElement("div")
+            var avatar = document.createElement('div');
+            avatar.classList = "comment-avatar";
+            avatar.innerHTML = '<img src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png" alt="avatar" />';
+            commentHead.appendChild(avatar);
+            commentHead.classList.add("comment-head");
+            var commentHeaderText = document.createElement('h6');
+            commentHeaderText.classList = "comment-name";
+            commentHeaderText.textContent = "Pepito Ramirez";
+            commentHead.appendChild(commentHeaderText);
+            var commentFooter = document.createElement('div');
+            commentFooter.classList = "comment-footer";
+            var commentFooterText = document.createElement('span');
+            commentFooterText.textContent = "20 minutes ago";
+
+            commentFooter.appendChild(commentFooterText);
+            commentHead.appendChild(commentFooter);
+
+            commentBox.appendChild(commentHead);
+            var commentcontent = document.createElement('div');
+            commentcontent.classList = "comment-content";
+            commentcontent.textContent = prompt;
+            commentBox.appendChild(commentcontent)
+            commentList.appendChild(commentBox);
+            replyList.appendChild(commentList);
+            comment.appendChild(replyList)
+            // var commentcontent = document.createElement('div');
+            // commentcontent.classList = "comment-content";
+            // commentcontent.textContent = newCommentText;
+            // comment.appendChild(commentcontent);
+            // this.querySelector('.new-comment').value = '';
+
+            // < ul class="comments-list reply-list" >
+            //                                 <li>
+            //                                     <div class="comment-box">
+            //                                         <div class="comment-head">
+            //                                             <div class="comment-avatar"><img
+            //                                                     src="https://atg-prod-scalar.s3.amazonaws.com/studentpower/media/user%20avatar.png"
+            //                                                     alt=""></div>
+            //                                             <h6 class="comment-name"><a href="#">Lorena Rojero</a></h6>
+            //                                             <span>10 minutes ago</span>
+            //                                         </div>
+            //                                         <div class="comment-content">
+            //                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            //                                             Velit omnis animi et iure laudantium vitae, praesentium
+            //                                             optio, sapiente distinctio illo?
+            //                                         </div>
+            //                                     </div>
+            //                                 </li>
+
+            //                                 <li>
+
+            //                                     <div class="comment-box">
+            //                                         <div class="comment-head">
+            //                                             <div class="comment-avatar"><img
+            //                                                     src="https://w7.pngwing.com/pngs/178/419/png-transparent-man-illustration-computer-icons-avatar-login-user-avatar-child-web-design-face-thumbnail.png"
+            //                                                     alt=""></div>
+            //                                             <h6 class="comment-name"><a href="#">Agustin
+            //                                                     Ortiz</a></h6>
+            //                                             <span>10 minutes ago</span>
+            //                                         </div>
+            //                                         <div class="comment-content">
+            //                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            //                                             Velit omnis animi et iure laudantium vitae, praesentium
+            //                                             optio, sapiente distinctio illo?
+            //                                         </div>
+            //                                     </div>
+            //                                 </li>
+            //                             </ul >
+            console.log('COM', comment)
+        }
         function sendMessage() {
             var chatInput = document.getElementById('chat-input');
             var chatMessages = document.getElementById('chat-messages');
+
             var message = document.createElement('div');
             message.className = 'message';
             var avatar = document.createElement('img');
@@ -944,6 +1856,7 @@
             message2.appendChild(text2);
             chatMessages.appendChild(message2);
             chatMessages.appendChild(time2);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
             chatInput.value = '';
         }
 
@@ -988,6 +1901,7 @@
                     commentFooterText.textContent = "20 minutes ago";
                     var reply = document.createElement('i');
                     reply.classList = "fa fa-reply";
+                    reply.onclick = addReply;
                     var heart = document.createElement('i');
                     heart.classList = "fa fa-heart";
                     commentFooter.appendChild(commentFooterText);
