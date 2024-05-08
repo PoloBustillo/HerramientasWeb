@@ -5,6 +5,7 @@
     <title>Proyecto Herramientas Web</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
@@ -16,15 +17,19 @@
 <body>
 
 
-    <div id="floating-button" onclick="toggleChat()">Chat</div>
+    <div class="fixed bg-[#b118bf] text-[white] w-[61px] cursor-pointer text-[15px] text-center py-2.5 rounded-[10%] border-[none] right-5 bottom-5"
+        onclick="toggleChat()">
+        Chat
+    </div>
 
-    <div id="chat-container" style="display: none;">
+    <div class="hidden fixed w-[300px] h-[400px] bg-[#f8f8f8] border shadow-[0_2px_5px_rgba(0,0,0,0.3)] rounded-[10px] border-solid border-[#ddd] right-5 bottom-5"
+        id="chat-container">
         <div id="chat-header">
             <h3>Chat</h3>
             <span class="close-button"><a onclick="toggleChat()">&times;</a></span>
         </div>
+        <!-- Aquí irán los mensajes del chat -->
         <div id="chat-messages">
-            <!-- Aquí irán los mensajes del chat -->
         </div>
         <div id="chat-footer">
             <form id="chat-form" style="width: 100%;display: flex;">
@@ -75,7 +80,7 @@
             <li><a href="#" onclick="displayModalSesion()">Iniciar Sesion</a></li>
         </ul>
     </nav>
-    <div class="container">
+    <div class="containerv2">
         <main>
             <section class="blogs">
                 <div class="card">
@@ -1547,7 +1552,7 @@
                     <div class="container">
                         <h4>Tags</h4>
                     </div>
-                    <div class="container">
+                    <div class="containerv2s">
                         <p>
                             <span class="badge">Github</span>
                             <span class="badge">Programming</span>
@@ -1612,7 +1617,7 @@
                 </div>
                 <hr />
                 <div class="card">
-                    <div class="container">
+                    <div class="containerv2">
                         <h4>Popular Posts</h4>
                     </div>
                     <ul class="popular-post-list">
@@ -1641,7 +1646,7 @@
                 </div>
                 <hr />
                 <div class="card">
-                    <div class="container">
+                    <div class="containerv2">
                         <h4>Dudas y sugerencias</h4>
                     </div>
                     <ul class="popular-post-list">
@@ -1670,7 +1675,7 @@
 
     </div>
     <footer id="main-footer" class="add-padding border-top-color2">
-        <div class="container">
+        <div class="containerv2">
             <p><a href="/">MUCHO PROGRAMA BLOG</a></p><br>
             <div id="social-icons">
                 <i class="fa fa-facebook-official social-icon"></i>
@@ -1743,7 +1748,6 @@
         });
 
         function addReply() {
-
             var prompt = window.prompt('Nuevo mensaje:')
             console.log(prompt);
             var comment = this.parentNode.parentNode.parentNode.parentNode
