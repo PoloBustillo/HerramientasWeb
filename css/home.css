@@ -470,7 +470,7 @@ a {
 }
 
 #chat-container {
-    position: fixed;
+    /* position: fixed;
     bottom: 20px;
     right: 20px;
     width: 300px;
@@ -478,7 +478,7 @@ a {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
 }
 
 #chat-header {
@@ -521,13 +521,7 @@ a {
     cursor: pointer;
 }
 
-#close-button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
+#close-button {}
 
 .message,
 .message2 {
